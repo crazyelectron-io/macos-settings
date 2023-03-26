@@ -57,6 +57,7 @@ ssh-add --apple-use-keychain ~/.ssh/crazyelectron
 
 # Download and install VSCode for Apple Silicon (Zip).
 # Login with GitHub account to activate Settings Sync in VSCode.
+# In de command Palette (Cmd+Shift+P) type 'shell command' to find the `Shell Command: Install 'code' command in PATH`
 
 # Download and install Office 365.
 ```
