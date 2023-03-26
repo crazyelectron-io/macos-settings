@@ -27,6 +27,7 @@ git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh
 # Install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
+# Copy the zshrc file
 
 # Copy SSH keys to ~/.ssh
 # Add GitHub key to store
