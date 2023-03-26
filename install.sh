@@ -30,6 +30,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Copy the zshrc en p10k config files
 mv -f zshrc ~/.zshrc
 mv -f p10k.zsh ~/.p10k.zsh
+# Install MesloLGS NF fonts
 
 # Copy SSH keys to ~/.ssh
 # Add GitHub key to store
