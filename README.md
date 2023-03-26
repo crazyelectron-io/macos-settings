@@ -50,9 +50,6 @@ git config --global core.editor nvim
 # Add GitHub key to store
 ssh-add --apple-use-keychain ~/.ssh/crazyelectron
 
-# Install Git credentials helper
-brew install git-credentials
-
 # Install _Recipe Keeper_ from the App Store.
 # Install _Remote Desktop_ from the App Store.
 
@@ -60,3 +57,4 @@ brew install git-credentials
 # Login with GitHub account to activate Settings Sync in VSCode.
 
 # Download and install Office 365.
+```
