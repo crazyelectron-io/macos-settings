@@ -50,6 +50,8 @@ git config --global core.editor nvim
 # Add GitHub key to store
 ssh-add --apple-use-keychain ~/.ssh/crazyelectron
 
+# Add the key to GitHub (Settings).
+
 # Install _Recipe Keeper_ from the App Store.
 # Install _Remote Desktop_ from the App Store.
 
