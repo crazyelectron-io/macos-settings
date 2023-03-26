@@ -40,6 +40,19 @@ git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
 
+# Configure Git
+git config --global user.name "crazyelectron-io"
+git config --global user.email "ron@crazyelectron.io"
+git config --global color.ui true
+git config --global core.editor nvim
+
+# Copy SSH keys to ~/.ssh
+# Add GitHub key to store
+ssh-add --apple-use-keychain ~/.ssh/crazyelectron
+
+# Install Git credentials helper
+brew install git-credentials
+
 # Install _Recipe Keeper_ from the App Store.
 # Install _Remote Desktop_ from the App Store.
 
