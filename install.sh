@@ -20,7 +20,7 @@ brew install —cask iterm2
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
 
 # Copy SSH keys to ~/.ssh
-mkdir ~/.ssh && cp ~/backup/ssh/* ~/.ssh
+mkdir ~/.ssh && cp ~/backup/ssh/* ~/.ssh && chmod 600 ~/.ssh/*
 
 pause
 
