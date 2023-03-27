@@ -17,10 +17,15 @@ brew install cask
 brew install —cask iterm2
 
 # Install usefull tools
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch kicad zsh jq
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch kicad zsh jq mc
+
+# Copy SSH keys to ~/.ssh
+mkdir -p ~/.ssh
+cp ~/backup/install-macos/ssh/* ~/.ssh
+chmod 600 ~/.ssh/*
 
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # Install power line fonts
 # See: https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 # Install Oh My ZSH plugins
@@ -33,7 +38,6 @@ mv -f zshrc ~/.zshrc
 mv -f p10k.zsh ~/.p10k.zsh
 # Install MesloLGS NF fonts
 
-# Copy SSH keys to ~/.ssh
 # Add GitHub key to store
 ssh-add --apple-use-keychain ~/.ssh/crazyelectron
 
