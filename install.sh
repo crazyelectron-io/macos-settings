@@ -17,7 +17,7 @@ brew install —cask iterm2
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
 # Install usefull tools
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq python-pip3
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
 
 # Copy SSH keys to ~/.ssh
 mkdir ~/.ssh && cp ~/backup/ssh/* ~/.ssh
