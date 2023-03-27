@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Install Xcode CLI
-xcode-select --install
-
 # Install Homebrew. See also: https://docs.brew.sh/Installation.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
