@@ -7,7 +7,7 @@ Some steps are manual, some are scripted.
 ## Prepare
 
 mkdir -p ~/backup
-sudo mount -t nfs -o reservdpr,rw 10.0.0.3:/mnt/naspool/backup ~/backup
+#sudo mount -t nfs -o reservdpr,rw 10.0.0.3:/mnt/naspool/backup ~/backup
 xcode-select --install
 
 ## Install basic tools
