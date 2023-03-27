@@ -8,6 +8,7 @@ xcode-select --install
 
 # Add Homebrew to the PATH
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ron/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Homebrew Cask to support installation of GUI apps
 brew install cask
