@@ -17,7 +17,7 @@ brew install cask
 brew install —cask iterm2
 
 # Install usefull tools
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch kicad zsh
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch kicad zsh jq
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”
