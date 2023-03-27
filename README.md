@@ -4,13 +4,10 @@ My personal setup for a MacOS device after factory reset (for MacOS 13).
 It includes installation og Homebrew, several usefull tools and settings for Oh My ZSH, Powerlevel10k and iTerm2.
 Some steps are manual, some are scripted.
 
-## Connect to server
+## Prepare
 
 mkdir -p ~/backup
 sudo mount -t nfs -o reservdpr,rw 10.0.0.3:/mnt/naspool/backup ~/backup
-
-## Install Xcode CLI
-
 xcode-select --install
 
 ## Install basic tools
