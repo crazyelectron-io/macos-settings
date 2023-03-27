@@ -11,7 +11,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install cask
 
 # Install iTerm2
-brew install —cask iterm2
+brew --cask install iterm2
 
 # Install Rosetta2ß
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
