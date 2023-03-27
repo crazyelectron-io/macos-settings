@@ -1,4 +1,4 @@
-# MacOS seutup after factory reset
+# MacOS setup after factory reset
 
 My personal setup for a MacOS device after factory reset (for MacOS 13).
 It includes installation og Homebrew, several usefull tools and settings for Oh My ZSH, Powerlevel10k and iTerm2.
