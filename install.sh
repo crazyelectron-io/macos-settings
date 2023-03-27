@@ -16,33 +16,32 @@ brew install cask
 # Install iTerm2
 brew install —cask iterm2
 
+# Install Rosetta2ß
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+
 # Install usefull tools
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch kicad zsh jq mc
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq python-pip3
 
 # Copy SSH keys to ~/.ssh
-mkdir -p ~/.ssh
-cp ~/backup/install-macos/ssh/* ~/.ssh
-chmod 600 ~/.ssh/*
+mkdir ~/.ssh && cp ~/backup/ssh/* ~/.ssh
+
+pause
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# Install power line fonts
-# See: https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
+
 # Install Oh My ZSH plugins
 git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
+
+# Install the Powerline fonts
+git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
+
 # Install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
+
 # Copy the zshrc en p10k config files
-mv -f zshrc ~/.zshrc
-mv -f p10k.zsh ~/.p10k.zsh
-# Install MesloLGS NF fonts
+cp -f ~/backup/install-macos/zshrc ~/.zshrc
+cp -f ~/backup/install-macos/p10k.zsh ~/.p10k.zsh
 
-# Add GitHub key to store
-ssh-add --apple-use-keychain ~/.ssh/crazyelectron
-
-# Configure Git
-git config --global user.name "crazyelectron-io"
-git config --global user.email "ron@crazyelectron.io"
-git config --global color.ui true
-git config --global core.editor nvim
+# Install more tools
+homebrew install kicad age flux
