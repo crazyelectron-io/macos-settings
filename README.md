@@ -9,6 +9,10 @@ Some steps are manual, some are scripted.
 mkdir -p ~/backup
 sudo mount -t nfs -o reservdpr,rw 10.0.0.3:/mnt/naspool/backup ~/backup
 
+## Install Xcode CLI
+
+xcode-select --install
+
 ## Install basic tools
 
 Homebrew is an essential tool for installing all kinds of commands and with the addition of Cask, it can also installs GUI-based tools.
@@ -16,9 +20,6 @@ After that we install `iterm2` as our go-to terminal and some other usefull stuf
 
 ```bash
 #!/usr/bin/env bash
-
-# Install Xcode CLI
-xcode-select --install
 
 # Install Homebrew. See also: https://docs.brew.sh/Installation.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
