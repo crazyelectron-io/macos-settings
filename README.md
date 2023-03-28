@@ -12,6 +12,7 @@ mkdir -p ~/backup
 mount -t smb //10.0.0.3/backup ~/backup
 git clone https://github.com/crazyelectron-io/macos-settings.git
 cd macos-settings
+chmod +x *.sh
 ```
 
 ## Install basic tools
