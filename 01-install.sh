@@ -12,7 +12,8 @@ echo "...Install usefull tools."
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
 
 # Copy SSH keys to ~/.ssh
-#mkdir ~/.ssh && cp ~/backup/ssh/* ~/.ssh && chmod 600 ~/.ssh/*
+mkdir -p ~/.ssh 
+cp ~/backup/ssh/* ~/.ssh
 
 echo "...Install Oh My Zsh."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
