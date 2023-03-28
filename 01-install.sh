@@ -70,3 +70,8 @@ echo "...Make sure the iCloud `projects` folder is downloaded."
 find ~/Library/Mobile\ Documents/com~apple~CloudDocs/projects -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
 # Add a symlink in the user's home folder
 ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/projects ~/projects
+
+echo "...Install FiScript to add custom scripts to Finder context menu."
+# See: https://github.com/Mortennn/FiScript
+brew install --cask https://raw.githubusercontent.com/Mortennn/FiScript/master/fiscript.rb
+echo "...Enable FiScript and add scripts to context menu manually."
