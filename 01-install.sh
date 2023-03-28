@@ -30,8 +30,20 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 echo "...Install powerlevel10k."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "...Add powerlevel10k as theme to ZSH."
+echo "...Configure ZSH with p10k theme, aliases and other settings."
 gsed -i 's+ZSH_THEME=\"robbyrussel\"+ZSH_THEME=\"powerlevel10k/powerlevel10k\"+g' ~/.zshrc
+gsed -i "s+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time+zstyle ':omz:update' mode reminder+g" ~/.zshrc
+gsed -i 's+# ENABLE_CORRECTION=\"true\"+ENABLE_CORRECTION=\"true\"+g' ~/.zshrc
+gsed -i 's+# COMPLETION_WAITING_DOTS=\"true\"+COMPLETION_WAITING_DOTS=\"true\"+g' ~/.zshrc
+gsed -i 's+# HIST_STAMPS=\"mm/dd/yyyy\"+HIST_STAMPS=\"dd/mm/yyyy\"+g' ~/.zshrc
+gsed -i 's+plugins=\(.*\)+plugins=\(git zsh-syntax-highlighting zsh-autosuggestions\)+g' ~/.zshrc
+echo "" >> ~/.zshrc
+echo "# Define command aliases" >> ~/.zshrc
+echo "alias ll=ls -l" >> ~/.zshrc
+echo "alias la=ls -al" >> ~/.zshrc
+echo "alias l=ls -l" >> ~/.zshrc
+echo "alias grep=ggrep -color" >> ~/.zshrc
+echo "alias sed=gsed" >> ~/.zshrc
 source ~/.zshrc
 
 echo "...Configure powerlevel10k with `p10k configure`."
