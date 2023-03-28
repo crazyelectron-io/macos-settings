@@ -2,9 +2,6 @@
 # file: 01-install.sh
 # synopsis: install usefull tools and configure shell
 
-echo "...Install Homebrew Cask to support installation of GUI apps."
-brew install cask
-
 echo "...Install iTerm2"
 brew install iterm2
 
