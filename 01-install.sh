@@ -68,3 +68,5 @@ git config --global core.editor nvim
 
 echo "...Make sure the iCloud `projects` folder is downloaded."
 find ~/Library/Mobile\ Documents/com~apple~CloudDocs/projects -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
+# Add a symlink in the user's home folder
+ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/projects ~/projects
