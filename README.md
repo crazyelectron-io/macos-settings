@@ -6,10 +6,10 @@ Some steps are manual, some are scripted.
 
 ## Prepare
 
-``bash
+```bash
 xcode-select --install
 git clone https://github.com/crazyelectron-io/macos-settings.git
-``
+```
 
 ## Install basic tools
 
