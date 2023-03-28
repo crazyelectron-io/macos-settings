@@ -39,11 +39,16 @@ gsed -i 's+# HIST_STAMPS=\"mm/dd/yyyy\"+HIST_STAMPS=\"dd/mm/yyyy\"+g' ~/.zshrc
 gsed -i 's+plugins=\(.*\)+plugins=\(git zsh-syntax-highlighting zsh-autosuggestions\)+g' ~/.zshrc
 echo "" >> ~/.zshrc
 echo "# Define command aliases" >> ~/.zshrc
-echo "alias ll=ls -l" >> ~/.zshrc
-echo "alias la=ls -al" >> ~/.zshrc
-echo "alias l=ls -l" >> ~/.zshrc
-echo "alias grep=ggrep -color" >> ~/.zshrc
-echo "alias sed=gsed" >> ~/.zshrc
+echo 'alias ll="ls -l"' >> ~/.zshrc
+echo 'alias la="ls -al"' >> ~/.zshrc
+echo 'lias l="ls -l"' >> ~/.zshrc
+echo 'alias grep="ggrep -color"' >> ~/.zshrc
+echo 'alias sed="gsed"' >> ~/.zshrc
+echo 'alias gc="git commit -m"' >> ~/.zshrc
+echo 'alias ga="git add ."' >> ~/.zshrc
+echo 'alias gs="git status"' >> ~/.zshrc
+echo 'alias k="kubectl"' >> ~/.zshrc
+echo 'alias kc="kubectl config"' >> ~/.zshrc
 source ~/.zshrc
 
 echo "...Configure powerlevel10k with `p10k configure`."
