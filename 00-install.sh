@@ -38,10 +38,10 @@ echo "...Install powerlevel10k."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo "...Add powerlevel10k as theme to ZSH."
-gsed /ZSH_THEME="robbyrussel"/ZSH_THEME="powerlevel10k/powerlevel10k"/ ~/.zshrc > ~/.zshrc.new
-mv -f ~/.zshrc ~/.zshrc.backup
-mv ~/.zshrc.new ~/.zshrc
+gsed -i 's+ZSH_THEME=\"robbyrussel\"+ZSH_THEME=\"powerlevel10k/powerlevel10k\"+g' ~/.zshrc
 source ~/.zshrc
 
 echo "...Configure powerlevel10k with `p10k configure`."
 p10k configure
+
+echo ;echo "...Exit and restart iterm2 (pin it to the Dock)."
