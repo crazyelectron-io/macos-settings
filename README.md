@@ -23,6 +23,7 @@ To use Homebrew it must be added to the path.
 After that we install `iterm2` as our go-to terminal.
 All this is done in `00-install.sh`.
 Once finished, `Terminal` should be closed and iTerm2 should be started (and pinned to the Dock).
+There the next script can be run: `macos-settings/01-install.sh`.
 
 ## Install aditional apps
 
