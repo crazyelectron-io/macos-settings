@@ -15,11 +15,14 @@ brew install iterm2
 echo "...Install Rosetta2"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
+echo "...Make sure the Shared folder is downloaded."
+find ~/Library/Mobile Documents/com~apple~CloudDocs/Shared -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
+
 echo "...Install usefull tools."
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh
 echo [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh" >>~/.bash_profile
 
-echo "...Create symlink to SSH directory. *** Make sure the Shared folder is synced ***"
+echo "...Create symlink to SSH directory."
 ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Shared/ssh ~/.ssh
 
 echo "...Install Oh My Zsh."
