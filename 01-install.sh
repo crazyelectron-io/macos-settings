@@ -2,13 +2,18 @@
 # file: 01-install.sh
 # synopsis: install usefull tools and configure shell
 
-echo "...Install usefull tools."
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
-echo "[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"" >>~/.bash_profile
+echo "...Install Rosetta2"
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
-# Copy SSH keys to ~/.ssh
-mkdir -p ~/.ssh 
-cp ~/backup/ssh/* ~/.ssh
+echo "...Make sure the Shared folder is downloaded."
+find ~/Library/Mobile Documents/com~apple~CloudDocs/Shared -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
+
+echo "...Install usefull tools."
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh gnu-sed grep
+echo [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh" >>~/.bash_profile
+
+echo "...Create symlink to SSH directory."
+ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Shared/ssh ~/.ssh
 
 echo "...Install Oh My Zsh."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -22,4 +27,9 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 echo "...Install powerlevel10k."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "...Close the terminal, pin iTerm2 to the dock and start `02-install.sh` in iTerm2."
+echo "...Add powerlevel10k as theme to ZSH."
+gsed -i 's+ZSH_THEME=\"robbyrussel\"+ZSH_THEME=\"powerlevel10k/powerlevel10k\"+g' ~/.zshrc
+source ~/.zshrc
+
+echo "...Configure powerlevel10k with `p10k configure`."
+p10k configure
