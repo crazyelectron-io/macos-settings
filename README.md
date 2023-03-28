@@ -33,3 +33,4 @@ There the next script can be run: `macos-settings/01-install.sh`.
 Login with GitHub account to activate Settings Sync in VSCode.
 In the command Palette (Cmd+Shift+P) execute `Shell Command: Install 'code' command in PATH`.
 - Download and install Office 365 from `https://office.com`.
+- Download and install [PIA VPN](https://www.privateinternetaccess.com/pages/download.Aug).
