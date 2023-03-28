@@ -27,12 +27,9 @@ There the next script can be run: `macos-settings/01-install.sh`.
 
 ## Install aditional apps
 
-Install _Recipe Keeper_ from the App Store and login with username/password (stored in keychain).
-Install _Remote Desktop_ from the App Store and configure a workspace with the company e-mail address.
-
-Download and install VSCode for Apple Silicon (Zip).
+- Install _Recipe Keeper_ from the App Store and login with username/password (stored in keychain).
+- Install _Remote Desktop_ from the App Store and configure a workspace with the company e-mail address.
+- Download and install VSCode for Apple Silicon (Zip).
 Login with GitHub account to activate Settings Sync in VSCode.
 In the command Palette (Cmd+Shift+P) type 'shell command' to find the `Shell Command: Install 'code' command in PATH`
-
-Download and install Office 365 from `https://office.com`.
-```
+- Download and install Office 365 from `https://office.com`.
