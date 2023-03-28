@@ -2,7 +2,7 @@
 
 My personal setup for a MacOS device after factory reset (for MacOS 13).
 It includes installation of Homebrew, many needed and usefull tools and ZSH shell configuration (with Powerlevel10k).
-Some steps are manual, some are scripted.
+Some steps are manual, most are scripted.
 
 ## Prepare
 
