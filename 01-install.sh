@@ -39,3 +39,12 @@ p10k configure
 
 echo "...Install more tools."
 brew install kicad age flux mc
+
+echo "...Configure `git` and GitHub."
+# Add GitHub key to store
+ssh-add --apple-use-keychain ~/.ssh/crazyelectron
+# Configure Git
+git config --global user.name "crazyelectron-io"
+git config --global user.email "ron@crazyelectron.io"
+git config --global color.ui true
+git config --global core.editor nvim
