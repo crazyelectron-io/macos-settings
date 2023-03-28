@@ -5,7 +5,7 @@
 echo "...Install Rosetta2"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
-echo "...Make sure the Shared folder is downloaded."
+echo "...Make sure the iCloud `Shared` folder is downloaded."
 find ~/Library/Mobile Documents/com~apple~CloudDocs/Shared -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
 
 echo "...Install usefull tools."
@@ -48,3 +48,6 @@ git config --global user.name "crazyelectron-io"
 git config --global user.email "ron@crazyelectron.io"
 git config --global color.ui true
 git config --global core.editor nvim
+
+echo "...Make sure the iCloud `projects` folder is downloaded."
+find ~/Library/Mobile Documents/com~apple~CloudDocs/projects -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
