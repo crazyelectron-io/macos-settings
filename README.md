@@ -12,16 +12,16 @@ After that we can clone this repository en run a few scripts locally.
 ```bash
 xcode-select --install
 git clone https://github.com/crazyelectron-io/macos-setup.git
-chmod +x macos-settings/*.sh
+chmod +x macos-setup/*.sh
 ```
 
 ## Install basic tools
 
 Homebrew is an essential tool for installing all kinds of packages and with the addition of Cask, it can also installs GUI-based tools.
 Next we install `iterm2` as our go-to terminal.
-All this is done in `macos-settings/00-install.sh`.
+All this is done in `macos-setup/00-install.sh`.
 Once finished, `Terminal` should be closed and iTerm2 should be started (and pinned to the Dock).
-There the next script can be run: `macos-settings/01-install.sh`.
+There the next script can be run: `macos-setup/01-install.sh`.
 
 ## Install aditional apps
 
