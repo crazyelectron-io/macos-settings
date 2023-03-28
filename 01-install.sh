@@ -10,6 +10,7 @@ echo "...Install Rosetta2"
 
 echo "...Install usefull tools."
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
+echo "[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"" >>~/.bash_profile
 
 # Copy SSH keys to ~/.ssh
 mkdir -p ~/.ssh 
