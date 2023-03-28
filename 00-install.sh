@@ -12,8 +12,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "...Install iTerm2."
 brew install iterm2
 
-# Install usefull tools
+echo "...Install Rosetta2"
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+
+echo "...Install usefull tools."
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh
 
-# Install Oh My Zsh
+echo "...Install Oh My Zsh."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”
