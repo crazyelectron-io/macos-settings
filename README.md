@@ -6,9 +6,10 @@ Some steps are manual, some are scripted.
 
 ## Prepare
 
-mkdir -p ~/backup
-#sudo mount -t nfs -o reservdpr,rw 10.0.0.3:/mnt/naspool/backup ~/backup
+``bash
 xcode-select --install
+git clone https://github.com/crazyelectron-io/macos-settings.git
+``
 
 ## Install basic tools
 
