@@ -20,6 +20,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 echo "...Install Oh My ZSH plugins."
 git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-docker
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Add the plugins to ZSH: `plugins=( git zsh-syntax-highlighting zsh-autosuggestions )`
 
 echo "...Install the Powerline fonts."
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
@@ -33,3 +36,6 @@ source ~/.zshrc
 
 echo "...Configure powerlevel10k with `p10k configure`."
 p10k configure
+
+echo "...Install more tools."
+brew install kicad age flux mc
