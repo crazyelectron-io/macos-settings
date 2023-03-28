@@ -24,25 +24,6 @@ After that we install `iterm2` as our go-to terminal as well as some other usefu
 All this is done in `00-install.sh`.
 
 ```bash
-#!/usr/bin/env bash
-
-# Install Homebrew. See also: https://docs.brew.sh/Installation.
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Add Homebrew to the PATH
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ron/.zprofile
-
-# Install Homebrew Cask to support installation of GUI apps
-brew install cask
-
-# Install iTerm2
-brew install —cask iterm2
-
-# Install usefull tools
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch kicad zsh
-
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”
 # Install power line fonts
 # See: https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 # Install Oh My ZSH plugins
