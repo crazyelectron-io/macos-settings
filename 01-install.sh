@@ -2,12 +2,6 @@
 # file: 01-install.sh
 # synopsis: install usefull tools and configure shell
 
-echo "...Install iTerm2"
-brew install iterm2
-
-echo "...Install Rosetta2"
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
-
 echo "...Install usefull tools."
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
 echo "[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"" >>~/.bash_profile
