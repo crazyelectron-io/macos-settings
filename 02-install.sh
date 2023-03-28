@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # file: 02-install.sh
-# synopsis: install p10k and additional tools (run in iterm2)
-
-echo "...Install powerlevel10k."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# synopsis: configure p10k and install additional tools (run in iterm2)
 
 echo "...Copy the zshrc en p10k config files."
 cp -f ~/backup/install-macos/zshrc ~/.zshrc
