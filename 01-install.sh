@@ -22,3 +22,5 @@ git clone https://github.com/zsh-users/zsh-docker.git ${ZSH_CUSTOM:-~/.oh-my-zsh
 
 echo "...Install the Powerline fonts."
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
+
+echo "...Close the terminal, pin iTerm2 to the dock and start `02-install.sh` in iTerm2."
