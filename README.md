@@ -24,6 +24,8 @@ After that we install `iterm2` as our go-to terminal.
 All this is done in `00-install.sh`.
 Once finished, `Terminal` should be closed and iTerm2 should be started (and pinned to the Dock).
 
+## Install aditional apps
+
 Install _Recipe Keeper_ from the App Store and login with username/password (stored in keychain).
 Install _Remote Desktop_ from the App Store and configure a workspace with the company e-mail address.
 
