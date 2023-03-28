@@ -19,7 +19,7 @@ echo "...Make sure the Shared folder is downloaded."
 find ~/Library/Mobile Documents/com~apple~CloudDocs/Shared -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
 
 echo "...Install usefull tools."
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh gnu-sed grep
 echo [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh" >>~/.bash_profile
 
 echo "...Create symlink to SSH directory."
@@ -37,4 +37,11 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 echo "...Install powerlevel10k."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "...Add `ZSH_THEME="powerlevel10k/powerlevel10k` to `~/.zshrc`, run `source ~/.zshrc` and configure powerlevel10k with `p10k configure`."
+echo "...Add powerlevel10k as theme to ZSH."
+gsed /ZSH_THEME="robbyrussel"/ZSH_THEME="powerlevel10k/powerlevel10k"/ ~/.zshrc > ~/.zshrc.new
+mv -f ~/.zshrc ~/.zshrc.backup
+mv ~/.zshrc.new ~/.zshrc
+source ~/.zshrc
+
+echo "...Configure powerlevel10k with `p10k configure`."
+p10k configure
