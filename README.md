@@ -11,7 +11,7 @@ After that we can clone this repository en run a few scripts locally.
 
 ```bash
 xcode-select --install
-git clone https://github.com/crazyelectron-io/macos-settings.git
+git clone https://github.com/crazyelectron-io/macos-setup.git
 chmod +x macos-settings/*.sh
 ```
 
