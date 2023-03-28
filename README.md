@@ -8,7 +8,10 @@ Some steps are manual, some are scripted.
 
 ```bash
 xcode-select --install
+mkdir -p ~/backup
+mount -t smb //10.0.0.3/backup ~/backup
 git clone https://github.com/crazyelectron-io/macos-settings.git
+cd macos-settings
 ```
 
 ## Install basic tools
@@ -45,6 +48,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
 
 # Copy SSH keys to ~/.ssh
+mkdir -p ~/.ssh
+cp ~/backup/install-macos/ssh/* ~/.ssh
+
 # Add GitHub key to store
 ssh-add --apple-use-keychain ~/.ssh/crazyelectron
 
@@ -54,8 +60,7 @@ git config --global user.email "ron@crazyelectron.io"
 git config --global color.ui true
 git config --global core.editor nvim
 
-
-# Add the key to GitHub (Settings).
+# Add the key `crazyelectron.pub` to GitHub (in _Settings_).
 
 # Install _Recipe Keeper_ from the App Store.
 # Install _Remote Desktop_ from the App Store.
