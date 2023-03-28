@@ -1,22 +1,24 @@
 #!/usr/bin/env bash
+# file: 01-install.sh
+# synopsis: install homebrew
 
-# Install Homebrew. See also: https://docs.brew.sh/Installation.
+echo "...Install Homebrew. See also: https://docs.brew.sh/Installation."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Add Homebrew to the PATH
+echo "...Add Homebrew to the PATH"
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ron/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install Homebrew Cask to support installation of GUI apps
+echo "...Install Homebrew Cask to support installation of GUI apps."
 brew install cask
 
-# Install iTerm2
+echo "...Install iTerm2"
 brew --cask install iterm2
 
-# Install Rosetta2ß
+echo "...Install Rosetta2"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
-# Install usefull tools
+echo "...Install usefull tools."
 brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh jq
 
 # Copy SSH keys to ~/.ssh
