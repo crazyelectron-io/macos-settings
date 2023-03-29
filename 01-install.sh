@@ -80,4 +80,4 @@ echo "...Setup SOPS encryption with `age`."
 mkdir -p ~/.sops
 ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Shared/SOPS/key.txt ~/.sops/key.txt
 # TODO: Add age public key to GitHub template
-cat ~/.sops/key.txt | ggrep -oP "public key: \K(.*)" >> ~/.sops.yaml
+cp ~/macos-setup/sops.yaml ~/.sops.yaml
