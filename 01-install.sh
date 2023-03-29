@@ -75,3 +75,7 @@ echo "...Install FiScript to add custom scripts to Finder context menu."
 # See: https://github.com/Mortennn/FiScript
 brew install --cask https://raw.githubusercontent.com/Mortennn/FiScript/master/fiscript.rb
 echo "...Enable FiScript and add scripts to context menu manually."
+
+echo "...Setup SOPS encryption with `age`."
+mkdir -p ~/.sops
+ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Shared/SOPS/key.txt ~/.sops/key.txt
