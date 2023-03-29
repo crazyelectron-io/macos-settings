@@ -38,7 +38,7 @@ gsed -i 's+# COMPLETION_WAITING_DOTS=\"true\"+COMPLETION_WAITING_DOTS=\"true\"+g
 gsed -i 's+# HIST_STAMPS=\"mm/dd/yyyy\"+HIST_STAMPS=\"dd/mm/yyyy\"+g' ~/.zshrc
 gsed -i 's+plugins=\(.*\)+plugins=\(git zsh-syntax-highlighting zsh-autosuggestions\)+g' ~/.zshrc
 echo "" >> ~/.zshrc
-echo "export EDITOR=nvim" >> ~.zshrc
+echo "export EDITOR=nvim" >> ~/.zshrc
 echo "" >> ~/.zshrc
 echo "# Define command aliases" >> ~/.zshrc
 echo 'alias ll="ls -l"' >> ~/.zshrc
@@ -82,6 +82,6 @@ echo "...Setup SOPS encryption with `age`."
 mkdir -p ~/.sops
 ln -s -v -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Shared/SOPS/key.txt ~/.sops/key.txt
 chmod 700 ~/.sops/key.txt
-echo "export SOPS_AGE_KEY_FILE=$HOME/.sops/key.txt" >> ~.zshrc
+echo "export SOPS_AGE_KEY_FILE=$HOME/.sops/key.txt" >> ~/.zshrc
 # TODO: Add age public key to GitHub template
 cp ~/macos-setup/sops.yaml ~/.sops.yaml
