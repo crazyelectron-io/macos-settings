@@ -38,6 +38,8 @@ gsed -i 's+# COMPLETION_WAITING_DOTS=\"true\"+COMPLETION_WAITING_DOTS=\"true\"+g
 gsed -i 's+# HIST_STAMPS=\"mm/dd/yyyy\"+HIST_STAMPS=\"dd/mm/yyyy\"+g' ~/.zshrc
 gsed -i 's+plugins=\(.*\)+plugins=\(git zsh-syntax-highlighting zsh-autosuggestions\)+g' ~/.zshrc
 echo "" >> ~/.zshrc
+echo "export EDITOR=nvim" >> ~.zshrc
+echo "" >> ~/.zshrc
 echo "# Define command aliases" >> ~/.zshrc
 echo 'alias ll="ls -l"' >> ~/.zshrc
 echo 'alias la="ls -al"' >> ~/.zshrc
