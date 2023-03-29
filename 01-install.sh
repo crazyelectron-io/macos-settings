@@ -55,7 +55,7 @@ echo "...Configure powerlevel10k with `p10k configure`."
 p10k configure
 
 echo "...Install more tools."
-brew install kicad age flux mc
+brew install kicad age flux mc sops
 
 echo "...Configure `git` and GitHub."
 # Add GitHub key to store
