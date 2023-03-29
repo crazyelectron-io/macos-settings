@@ -9,7 +9,7 @@ echo "...Make sure the iCloud `Shared` folder is downloaded."
 find ~/Library/Mobile\ Documents/com~apple~CloudDocs/Shared -name '.*icloud' | sed 's|\.\([^/]*\)\.icloud$|\1|g' | while read fn; do brctl download "$fn"; done
 
 echo "...Install usefull tools."
-brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh gnu-sed grep go
+brew install neovim ansible keepassxc terraform nmap links geoip bash-completion watch zsh gnu-sed grep go gh
 echo [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh" >>~/.bash_profile
 
 echo "...Create symlink to SSH directory."
